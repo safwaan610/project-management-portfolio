@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Safwaan Fatkare | Project Management Portfolio</title>
+
+<meta name="description" content="Safwaan Fatkare - Project Management professional specializing in project coordination, lifecycle management, stakeholder communication, risk management, KPI tracking, and project delivery.">
+
+<style>
+:root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #17202a;
+    --muted: #5d6875;
+    --line: #e4e8ed;
+    --accent: #173b67;
+    --accent-light: #eef3f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.navlinks {
+    display: flex;
+    gap: 22px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.navlinks a:hover {
+    color: var(--accent);
+}
+
+/* HERO */
+
+.hero {
+    padding: 95px 0 75px;
+    background: white;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.03;
+    max-width: 900px;
+    margin: 15px 0 24px;
+    letter-spacing: -0.04em;
+}
+
+.lead {
+    font-size: 20px;
+    max-width: 790px;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 19px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.primary {
+    background: var(--accent);
+    color: white;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 75px 0;
+}
+
+.sectionhead {
+    margin-bottom: 32px;
+}
+
+.sectionhead h2 {
+    font-size: 35px;
+    margin: 5px 0 10px;
+    letter-spacing: -0.025em;
+}
+
+.sectionhead p {
+    color: var(--muted);
+    max-width: 760px;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 23px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 31px;
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* EXPERIENCE */
+
+.timeline {
+    border-left: 2px solid var(--line);
+    padding-left: 27px;
+}
+
+.role {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.role:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.role h3 {
+    margin: 0;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.role li {
+    margin-bottom: 9px;
+}
+
+/* LIFECYCLE */
+
+.lifecycle {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.phase {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+}
+
+.phase b {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.phase span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* PROJECTS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 23px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+}
+
+.project .bottom {
+    margin-top: auto;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 9px;
+    background: var(--accent-light);
+    border-radius: 999px;
+    font-size: 12px;
+    margin: 3px 4px 3px 0;
+    color: var(--accent);
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skillbox {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 23px;
+}
+
+.skillbox h3 {
+    margin-top: 0;
+}
+
+/* CONTACT */
+
+.contact-box {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #17202a;
+    color: white;
+    padding: 45px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.small {
+    font-size: 13px;
+    color: #b9c3ce;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .stats,
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lifecycle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .navlinks {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .stats,
+    .grid,
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .lifecycle {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav">
+
+<div class="brand">
+SF.
+</div>
+
+<div class="navlinks">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#lifecycle">Lifecycle</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+Project Management Portfolio
+</div>
+
+<h1>
+Planning clearly. Coordinating effectively. Delivering on time.
+</h1>
+
+<p class="lead">
+I'm Safwaan Fatkare, a project-focused professional with 2+ years of experience supporting software implementation, client-facing operations, project execution, cross-functional coordination, reporting, risk tracking, and process improvement.
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="#experience">
+View Experience
+</a>
+
+<a class="btn" href="mailto:safwaan610@gmail.com">
+Let's Connect
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+01 · About
+</div>
+
+<h2>
+Project management grounded in execution.
+</h2>
+
+<p>
+I bring a structured, detail-oriented approach to project delivery: defining work, organizing timelines, coordinating stakeholders, tracking progress, documenting decisions, identifying risks, and supporting continuous improvement.
+</p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong>2+</strong>
+<span>Years of professional experience</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>On-time, in-scope software rollouts</span>
+</div>
+
+<div class="stat">
+<strong>50+</strong>
+<span>Client issues resolved monthly</span>
+</div>
+
+<div class="stat">
+<strong>20%</strong>
+<span>Reduction in system downtime</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+02 · Experience
+</div>
+
+<h2>
+Technology project delivery experience.
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="role">
+
+<h3>
+Business Solution Engineer · TEKION
+</h3>
+
+<div class="meta">
+Bangalore, India · Feb 2022 – Apr 2024
+</div>
+
+<ul>
+
+<li>
+Managed software implementation projects, coordinating deliverables and stakeholders to achieve 100% on-schedule, in-scope rollouts.
+</li>
+
+<li>
+Compiled and maintained project status information, KPIs, action items, risks, dependencies, and project documentation.
+</li>
+
+<li>
+Coordinated weekly project meetings and prepared meeting minutes, KPI reports, decision logs, and project status updates.
+</li>
+
+<li>
+Used Jira to track project tasks, issues, dependencies, deliverables, and project status.
+</li>
+
+<li>
+Maintained project documentation and knowledge resources using Confluence, improving team productivity by 15%.
+</li>
+
+<li>
+Supported client onboarding through requirements, configurations, deliverables, issue resolution, and stakeholder communication.
+</li>
+
+<li>
+Collaborated with engineering, product, support, and business teams to align project deliverables with client requirements and business objectives.
+</li>
+
+<li>
+Identified project risks and issues and supported mitigation and resolution to minimize project impact.
+</li>
+
+<li>
+Monitored KPIs and recommended process improvements across project operations.
+</li>
+
+<li>
+Resolved 50+ client issues monthly through root-cause analysis, contributing to a 20% reduction in system downtime.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECT LIFECYCLE -->
+
+<section id="lifecycle">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+03 · Project Lifecycle
+</div>
+
+<h2>
+How I approach project delivery.
+</h2>
+
+<p>
+A structured approach for keeping scope, ownership, timelines, risks, deliverables, and communication visible from project initiation through closure.
+</p>
+
+</div>
+
+
+<div class="lifecycle">
+
+<div class="phase">
+<b>01 · Initiate</b>
+<span>
+Clarify objectives, stakeholders, requirements, scope, and success criteria.
+</span>
+</div>
+
+<div class="phase">
+<b>02 · Plan</b>
+<span>
+Build milestones, timelines, tasks, dependencies, resources, and communication routines.
+</span>
+</div>
+
+<div class="phase">
+<b>03 · Execute</b>
+<span>
+Coordinate teams, meetings, deliverables, requirements, and project activities.
+</span>
+</div>
+
+<div class="phase">
+<b>04 · Monitor</b>
+<span>
+Track KPIs, progress, issues, risks, dependencies, and project status.
+</span>
+</div>
+
+<div class="phase">
+<b>05 · Control</b>
+<span>
+Manage changes, blockers, documentation, stakeholder expectations, and mitigation actions.
+</span>
+</div>
+
+<div class="phase">
+<b>06 · Close</b>
+<span>
+Confirm deliverables, capture documentation, review outcomes, and identify improvements.
+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+04 · Selected Projects
+</div>
+
+<h2>
+Projects demonstrating planning and delivery.
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card project">
+
+<div>
+
+<h3>
+E-Bike Rental Application
+</h3>
+
+<p>
+Led end-to-end development of an Android e-scooter rental application from planning through testing and on-time delivery.
+</p>
+
+<span class="tag">Agile</span>
+<span class="tag">Scrum</span>
+<span class="tag">Sprint Management</span>
+<span class="tag">Task Allocation</span>
+
+</div>
+
+<div class="bottom">
+<b>2022 · Final Year Project</b>
+</div>
+
+</div>
+
+
+<div class="card project">
+
+<div>
+
+<h3>
+Online Banking System
+</h3>
+
+<p>
+Oversaw requirements gathering and project documentation for a web-based banking platform designed to support remote transactions.
+</p>
+
+<span class="tag">Requirements</span>
+<span class="tag">Documentation</span>
+<span class="tag">Project Planning</span>
+
+</div>
+
+<div class="bottom">
+<b>2022 · Minor Project</b>
+</div>
+
+</div>
+
+
+<div class="card project">
+
+<div>
+
+<h3>
+E-Commerce Website
+</h3>
+
+<p>
+Built a full-stack e-commerce platform with inventory and order management while coordinating project deliverables around technical and user requirements.
+</p>
+
+<span class="tag">Inventory</span>
+<span class="tag">Deliverables</span>
+<span class="tag">User Requirements</span>
+
+</div>
+
+<div class="bottom">
+<b>2022 · Minor Project</b>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+05 · Skills & Toolkit
+</div>
+
+<h2>
+Capabilities for project environments.
+</h2>
+
+</div>
+
+
+<div class="skills">
+
+
+<div class="skillbox">
+
+<h3>
+Project Management
+</h3>
+
+<p>
+Project Lifecycle Management · Project Planning · Scheduling · Deliverable Tracking · Risk & Issue Management · Change Management · Process Improvement · Status Reporting · KPI Tracking
+</p>
+
+</div>
+
+
+<div class="skillbox">
+
+<h3>
+Stakeholder & Client Management
+</h3>
+
+<p>
+Stakeholder Engagement · Client Communication · Cross-Functional Collaboration · Meeting Coordination · Requirements Gathering · Follow-Ups · Executive Communication · Negotiation
+</p>
+
+</div>
+
+
+<div class="skillbox">
+
+<h3>
+Planning & Reporting
+</h3>
+
+<p>
+Microsoft Project · Microsoft Excel · Power BI · KPI Reporting · Performance Reporting · Data Analysis · Documentation · Decision Logs
+</p>
+
+</div>
+
+
+<div class="skillbox">
+
+<h3>
+Tools & Methodologies
+</h3>
+
+<p>
+Jira · Confluence · Smartsheet · Trello · Google Workspace · Microsoft Office 365 · Agile · Scrum · Sprint Management
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+06 · Education & Certifications
+</div>
+
+<h2>
+Project management foundation.
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Master of Science in Project Management
+</h3>
+
+<p>
+Northeastern University · 2024–2026 · GPA 3.907
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Master of Computer Applications
+</h3>
+
+<p>
+NMIMS, Mumbai · 2020–2022 · GPA 3.47
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+BSc in Information Technology
+</h3>
+
+<p>
+Mumbai University · 2017–2020 · CGPA 7.35
+</p>
+
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<div class="card">
+
+<h3>
+Relevant Certifications
+</h3>
+
+<p>
+Principles in Quality Management · Principles in Risk Management · Project Resource Management · Requirements Elicitation for Business Analysis · AI in the Workplace
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="sectionhead">
+
+<div class="eyebrow">
+07 · Contact
+</div>
+
+<h2>
+Let's build and deliver better projects.
+</h2>
+
+<p>
+Open to Project Coordinator, Project Management, and Technology Operations opportunities where structured execution, stakeholder coordination, and continuous improvement can create measurable impact.
+</p>
+
+</div>
+
+
+<div class="actions">
+
+<a class="btn primary" href="mailto:safwaan610@gmail.com">
+Email Me
+</a>
+
+<a class="btn" href="https://www.linkedin.com/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<div>
+
+<strong>
+Safwaan Fatkare
+</strong>
+
+<div class="small">
+Project Management · Project Coordination · Technology Operations
+</div>
+
+</div>
+
+<div class="small">
+© 2026 Safwaan Fatkare
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
